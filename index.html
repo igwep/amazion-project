@@ -12,9 +12,9 @@
             <header class="bg-amazon-blue  h-14 ">
                 <nav class="flex pt-2 items-center  justify-between gap-12
                  p-2 mx-10">
-                    <div class="md:w-32 md:h-9 sm:w-28 sm:h-8 items-center flex"><!-- logo -->
+                    <div class="md:w-32 md:h-9 w-12  items-center flex"><!-- logo -->
                         <img src="/images/amazon-logo-white.png" alt="" class="w-full md:flex hidden ">
-                        <img src="/images/amazon-mobile-logo-white.png" alt="" class="md:hidden flex  h-10 ">
+                        <img src="/images/amazon-mobile-logo-white.png" alt="" class="md:hidden flex  h-9 w-full">
                     </div>
                     <div class="flex md:w-[60rem] sm:w-[30rem] rounded-l-md mx-auto relative flex-row "><!-- search  -->
                         <input type="text" placeholder="Search" class="w-full font-semibold rounded-l-md p-2">
@@ -23,12 +23,17 @@
                           </svg>
                           </div>
                     </div>
-                    <div class="link-toggle  overflow-hidden items-center  md:flex absolute md:static md:w-40 md:h-5  top-14 w-full h-0  bg-amazon-blue md:bg-transparent left-0 transition-all duration-200 "><!-- orders -->
-                    <div class="flex justify-between items-center w-full flex-col md:flex-row  "><div class="w-full flex md:flex-col flex-row text-white text-sm items-center justify-center"><a href="" class=" h-[93%]  flex-col flex cursor-pointer hover:border hover:border-white "><button class="text-sm">Return</button><button class="font-bold">&Orders</button></a></div>
-                    <div class=" p-1 ">
-                        <button class="flex gap-0 cursor-pointer hover:border hover:border-white relative h-[93%] "><div class="w-12"><img src="/images/logos/cart-icon.png" alt="" class="w-full h-10 hidden md:flex"></div>
-                            <h4 class="text-white pt-2">Cart</h4>
-                            <h4 class="absolute  md:left-6  bottom-4 text-sm text-orange-400 ">3</h4><!-- cart  -->
+                    <div class="link-toggle  overflow-hidden md:overflow-visible items-center content-center md:flex absolute md:static md:w-40 md:h-5  top-14 w-full h-0  bg-amazon-blue md:bg-transparent left-0 transition-all duration-200 "><!-- orders -->
+                    <div class="flex justify-between items-center w-full flex-col md:flex-row  "><div class="w-full flex md:flex-col flex-row text-white text-sm items-center justify-center">
+                        <a href="" class=" h-[93%]  items-center justify-center md:p-0 p-2 w-full md:flex-col flex flex-row  cursor-pointer md:hover:bg-transparent hover:bg-blue-950 md:hover:border md:hover:border-white gap-1 md:gap-0 ">
+                            <button class="text-sm">Return</button>
+                            <button class="md:font-bold">& Orders</button>
+                        </a></div>
+                    <div class=" md:p-1 md:w-auto w-full flex justify-center items-center p-2">
+                        <button class="flex md:gap-0 gap-1 cursor-pointer md:hover:border justify-center md:hover:border-white md:hover:bg-transparent hover:bg-blue-950 w-full relative h-[93%] "><div class="w-12"><img src="/images/logos/cart-icon.png" alt="" class="w-full h-10 hidden md:flex"></div>
+                           <div class="flex items-center  gap-1">
+                            <h4 class="text-white  md:pt-2">Cart</h4>
+                            <h4 class="md:absolute  md:left-6  md:bottom-4 text-sm text-orange-400 ">3</h4></div> <!-- cart  -->
                             </button>
                     </div></div> 
                     </div>
@@ -39,8 +44,43 @@
                       </div>
                 </nav>
             </header>
-            <div><!-- item container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" ><!-- item container -->
+                <div class="w-64  overflow-hidden "><!-- item container -->
+                    <div class="w-full flex justify-center pt-9 mb-4 "><!-- item image container -->
+                        <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-[60%]">
+                    </div>    
+                    <div class="flex justify-center text-center">
+                        <h1><!-- item name -->
+                        Black and Gray Athletic <br> Cotton Socks - 6 Pairs
+                    </h1></div>
+                    <div class="flex justify-center items-center"><!-- ratings -->
+                        <img src="/images/ratings/rating-45.png" alt="" class="h-5">
+                        <p class="text-blue-400"><!-- number of ratings -->
+                            124</p>
+                    </div>
+                    <p><!-- price -->
+                        $10.90
+                    </p>
+                    <div class="">
+                        <select>
+                          <option selected value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                      <div>
+                        <button>Add to Cart</button>
+                      </div>
 
+
+                </div>
             </div>
         </div>
     </div>
