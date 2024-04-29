@@ -1,7 +1,8 @@
 
     const linkToggle = document.querySelector('.link-toggle');
     const burger = document.querySelector('.burger');
-    const productGrid = document.querySelector('.product-grid');   
+    const productGrid = document.querySelector('.product-grid'); 
+    const cartBtn = document.querySelectorAll('.cartBTN'); 
     burger.addEventListener('click',() => {
         if(linkToggle.classList.contains('h-0')){
             linkToggle.classList.remove('h-0');
@@ -52,7 +53,7 @@ let productHtml = '';
                <div><!-- add to cart message -->
                </div>
                <div class="mt-14 flex items-center justify-center bg-yellow-400 p-1 rounded-2xl cursor-pointer"><!-- buttom -->
-                 <button>Add to Cart</button>
+                 <button class="cartBTN">Add to Cart</button>
                </div>
                  </div>
                 </div>
