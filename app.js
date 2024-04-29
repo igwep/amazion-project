@@ -14,7 +14,7 @@
         };
         
     });
-    console.log(linkToggle.classList);
+    
 let productHtml = '';
  products.forEach((product) => {
     productHtml += `
@@ -52,8 +52,8 @@ let productHtml = '';
                    </div>
                <div><!-- add to cart message -->
                </div>
-               <div class="mt-14 flex items-center justify-center bg-yellow-400 p-1 rounded-2xl cursor-pointer"><!-- buttom -->
-                 <button class="cartBTN">Add to Cart</button>
+               <div class=" mt-14 flex items-center justify-center hover:bg-yellow-500 bg-yellow-400 p-1 rounded-2xl cursor-pointer"><!-- buttom -->
+                 <button class="cartBTN" dataset-product-name="${product.name}" >Add to Cart</button>
                </div>
                  </div>
                 </div>
@@ -62,3 +62,9 @@ let productHtml = '';
     
         productGrid.innerHTML = productHtml;
  });
+  cartBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        console.log('me');
+
+    });
+  });
