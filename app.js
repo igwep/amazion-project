@@ -2,7 +2,7 @@
     const linkToggle = document.querySelector('.link-toggle');
     const burger = document.querySelector('.burger');
     const productGrid = document.querySelector('.product-grid'); 
-    
+    const cartQuantity = document.querySelector('.cart-quantity')
     burger.addEventListener('click',() => {
         if(linkToggle.classList.contains('h-0')){
             linkToggle.classList.remove('h-0');
@@ -52,8 +52,8 @@ let productHtml = '';
                    </div>
                <div><!-- add to cart message -->
                </div>
-               <div class="cart-btn mt-14 flex items-center justify-center hover:bg-yellow-500 bg-yellow-400 p-1 rounded-2xl cursor-pointer" data-product-name="${product.name}"><!-- buttom -->
-                 <button  >Add to Cart</button>
+               <div class="cart-btn mt-14 flex items-center justify-center hover:bg-yellow-500 bg-yellow-400 p-1 rounded-2xl cursor-pointer" data-product-id="${product.id}"><!-- buttom -->
+                 <button class="">Add to Cart</button>
                </div>
                  </div>
                 </div>
@@ -66,8 +66,30 @@ let productHtml = '';
  productGrid.innerHTML = productHtml;
  document.querySelectorAll('.cart-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-        console.log(btn.dataset.productName); 
-        
+       const productId = btn.dataset.productId; 
+       let matching = '';
+       cart.forEach((item) => {
+        if(productId === item.productId){
+          matching = item;
+        }
+       })
+       if(matching){
+        matching.quantity += 1;
+       }
+       else{
+        cart.push({
+          productId: productId,
+          quantity:1
+         });
+       }
+       /* cart quantitiy */
+      let cartNumber = 0
+      cart.forEach((item) => {
+        cartNumber += item.quantity;
+
+      } );
+       console.log(cart);
+        cartQuantity.innerHTML = cartNumber;
 
     });
   });
