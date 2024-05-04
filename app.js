@@ -50,7 +50,10 @@ let productHtml = '';
                        <option value="10">10</option>
                      </select>
                    </div>
-               <div><!-- add to cart message -->
+               <div class="cart-message-${product.id} text-green-500 pt-2 transition-all duration-300 opacity-0  w-7 h-0 text-sm mb-0 mt-0 text-nowrap flex">Added to cart <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+               <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+             </svg>
+             </span>
                </div>
                <div class="cart-btn mt-14 flex items-center justify-center hover:bg-yellow-500 bg-yellow-400 p-1 rounded-2xl cursor-pointer" data-product-id="${product.id}"><!-- buttom -->
                  <button class="">Add to Cart</button>
@@ -59,9 +62,7 @@ let productHtml = '';
                 </div>
     
     `;
-    
-        
-        
+      
  });
  productGrid.innerHTML = productHtml;
  document.querySelectorAll('.cart-btn').forEach((btn) => {
@@ -76,6 +77,14 @@ let productHtml = '';
        const SnumberOfItems = document.querySelector(`.js-quantity-selector-${productId}`);
        console.log(SnumberOfItems.value);
        let numberQunatity = Number(SnumberOfItems.value);
+       const cartMessage = document.querySelector(`.cart-message-${productId}`);
+       cartMessage.classList.remove('opacity-0');
+       cartMessage.classList.add('opacity-100');
+       setTimeout(removeCartMessage, 1000);
+       function removeCartMessage(){
+        cartMessage.classList.remove('opacity-100');
+       cartMessage.classList.add('opacity-0');
+       }
 
        if(matching){
         matching.quantity += numberQunatity;
