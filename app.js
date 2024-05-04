@@ -37,7 +37,7 @@ let productHtml = '';
                </div>
                <!-- selection -->
                  <div class="mt-3">
-                     <select class="bg-gray-200 rounded-md shadow-sm shadow-black">
+                     <select class="bg-gray-200 rounded-md shadow-sm shadow-black js-quantity-selector-${product.id}">
                        <option selected value="1">1</option>
                        <option value="2">2</option>
                        <option value="3">3</option>
@@ -73,13 +73,17 @@ let productHtml = '';
           matching = item;
         }
        })
+       const SnumberOfItems = document.querySelector(`.js-quantity-selector-${productId}`);
+       console.log(SnumberOfItems.value);
+       let numberQunatity = Number(SnumberOfItems.value);
+
        if(matching){
-        matching.quantity += 1;
+        matching.quantity += numberQunatity;
        }
        else{
         cart.push({
           productId: productId,
-          quantity:1
+          quantity:numberQunatity
          });
        }
        /* cart quantitiy */

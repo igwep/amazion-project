@@ -710,6 +710,10 @@ video {
   width: 100%;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -906,8 +910,24 @@ video {
     bottom: 1rem;
   }
 
+  .md\:left-9 {
+    left: 2.25rem;
+  }
+
+  .md\:left-5 {
+    left: 1.25rem;
+  }
+
   .md\:left-6 {
     left: 1.5rem;
+  }
+
+  .md\:left-7 {
+    left: 1.75rem;
+  }
+
+  .md\:left-8 {
+    left: 2rem;
   }
 
   .md\:flex {
