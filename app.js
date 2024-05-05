@@ -108,3 +108,15 @@ let productHtml = '';
 
     });
   });
+  const topBtn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+  const scrollHeight = window.pageYOffset;
+  
+  if(scrollHeight > 500){
+    topBtn.classList.remove('hidden');
+  }
+  else{
+    topBtn.classList.add('hidden')
+  }
+
+  })
