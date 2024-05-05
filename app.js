@@ -1,10 +1,9 @@
-import { cart  } from "./cart.js";
+import { cart, addToCart, updateCart} from "./cart.js";
 import { products } from "./products.js";
 
     const linkToggle = document.querySelector('.link-toggle');
     const burger = document.querySelector('.burger');
-    const productGrid = document.querySelector('.product-grid'); 
-    const cartQuantity = document.querySelector('.cart-quantity')
+    const productGrid = document.querySelector('.product-grid');  
     burger.addEventListener('click',() => {
         if(linkToggle.classList.contains('h-0')){
             linkToggle.classList.remove('h-0');
@@ -70,41 +69,9 @@ let productHtml = '';
  document.querySelectorAll('.cart-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
        const productId = btn.dataset.productId; 
-       let matching = '';
-       cart.forEach((item) => {
-        if(productId === item.productId){
-          matching = item;
-        }
-       })
-       const SnumberOfItems = document.querySelector(`.js-quantity-selector-${productId}`);
-       console.log(SnumberOfItems.value);
-       let numberQunatity = Number(SnumberOfItems.value);
-       const cartMessage = document.querySelector(`.cart-message-${productId}`);
-       cartMessage.classList.remove('opacity-0');
-       cartMessage.classList.add('opacity-100');
-       setTimeout(removeCartMessage, 1000);
-       function removeCartMessage(){
-        cartMessage.classList.remove('opacity-100');
-       cartMessage.classList.add('opacity-0');
-       }
-
-       if(matching){
-        matching.quantity += numberQunatity;
-       }
-       else{
-        cart.push({
-          productId: productId,
-          quantity:numberQunatity
-         });
-       }
+       addToCart(productId);
        /* cart quantitiy */
-      let cartNumber = 0
-      cart.forEach((item) => {
-        cartNumber += item.quantity;
-
-      } );
-       console.log(cart);
-        cartQuantity.innerHTML = cartNumber;
+      updateCart();
 
     });
   });
@@ -127,3 +94,4 @@ let productHtml = '';
       top:0
     })
   })
+  
