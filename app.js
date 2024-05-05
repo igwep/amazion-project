@@ -119,4 +119,11 @@ let productHtml = '';
     topBtn.classList.add('hidden')
   }
 
+  });
+  topBtn.addEventListener('click', () =>{
+    
+    window.scrollTo({
+      left:0,
+      top:0
+    })
   })
