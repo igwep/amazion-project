@@ -3,27 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body>
-    <div class="mx-48 mt-7"><!-- main container -->
-<header class=" h-14">
-    <nav class="flex justify-between items-center">
-        <div class="md:w-32 md:h-9 w-12  items-center flex" id="Home">
-            <img src="/images/amazon-logo.png" alt="" class="w-full"><!-- logo -->
+<body class="p-4 md:p-0">
+    <div class="md:mx-36 sm:mx-5 "><!-- main container -->
+<header class="  h-14  items-center mt-3">
+    <nav class=" flex justify-between  items-center ">
+        <div class="md:w-32 md:h-8 w-12  items-center flex justify-center h-5 " id="Home">
+            <img src="/images/amazon-logo.png" alt="" class="w-full h-full hidden md:flex mt-5"><!-- logo -->
+            <img src="/images/amazon-mobile-logo.png" alt="" class="w-full h-9 md:hidden flex">
         </div>
         <div>
-            <h1 class="flex text-3xl font-bold">Checkout ( <span class="flex text-green-800 gap-1"><h3>3</h1><h3> items</h3></span> )</h1>
+            <h1 class="flex md:text-3xl sm:text-2xl font-semibold">Checkout ( <span class="text-green-700">3 items</span>) </h1>
         </div>
-        <div class="text-gray-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <div class="text-gray-400 w-9 h-9">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
                 <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
               </svg>
               
         </div>
     </nav>
 </header>
+<!--   -->
+<div><h1 class="font-bold text-2xl mt-20 ">Review your order</h1></div>
+<div class="flex mt-4  gap-6 md:flex-row flex-col-reverse">
+    <div class="  md:w-[50rem] w-[30rem]  border border-gray-400 "><!-- review -->
+        
+            <div class="flex justify-center md:justify-normal ">
+                <div class="   p-4"><!-- orders -->
+                        <div class="mb-5 font-bold text-xl text-green-700"><p>Delivery date:Tuesday, June 21</p></div>
+                        <div class="flex md:flex-row flex-col gap-4">
+                            <div class="flex gap-5 "><!-- card info-->
+                                <div class="w-[7rem] h-[7rem]  flex justify-center items-center  bg-contain"><!-- image container -->
+                                    <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-full h-full">
+                                  </div>
+                            <div class="w-80">
+                                <div class="font-bold"><p>Black and Gray athletic-cotton-socks-6-pairs</p></div>
+                                <div class="text-red-800 font-bold"><p>$10.90</p></div>
+                                <div><p>Quantity: 2 <span class="text-blue-500">Update Delete</span></p></div>
+                            </div>
+    
+                            </div><!-- end of car info -->
+                            <div class="w-52 ">
+                                <div class="font-bold"><p>Choose a Delivery option</p></div>
+                              <div class="flex flex-col w-full">
+                               <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                <div class="">
+                                    <p class="text-green-700">Tuesday, June 21</p>
+                                    <p class="text-gray-400">FREE shipping</p>
+                                </div></div> 
+                                <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                    <div class="">
+                                        <p class="text-green-700">Wednesday, june 15</p>
+                                        <p class="text-gray-400">$4.99-shipping</p>
+                                    </div></div> 
+                                    <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                        <div class="">
+                                            <p class="text-green-700">Monday, june 13</p>
+                                            <p class="text-gray-400">FREE shipping</p>
+                                        </div></div> 
+                                
+                              </div>
+    
+    
+                            </div>
+                        </div>
+                </div>
+               
+            </div>
+    </div>
+    <div class="p-2 w-"><!-- summary -->
+       <div class="mb-5 font-bold text-xl"> <h1>Order Summary</h1></div>
+        <div>
+        <div class="flex justify-between"><p>items (<span>3</span>):</p><span>$42.75</span></div>
+        <div>p</div>
+
+        </div>
+    </div>
+    
+</div>
 
     </div>
     

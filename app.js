@@ -57,7 +57,7 @@ let productHtml = '';
              </span>
                </div>
                <div class="cart-btn mt-14 flex items-center justify-center hover:bg-yellow-500 bg-yellow-400 p-1 rounded-2xl cursor-pointer" data-product-id="${product.id}"><!-- buttom -->
-       +          <button class="">Add to Cart</button>
+              <button class="">Add to Cart</button>
                </div>
                  </div>
                 </div>
