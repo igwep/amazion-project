@@ -1253,6 +1253,14 @@ video {
     height: 70%;
   }
 
+  .md\:h-\[5rem\] {
+    height: 5rem;
+  }
+
+  .md\:h-\[6rem\] {
+    height: 6rem;
+  }
+
   .md\:w-32 {
     width: 8rem;
   }
@@ -1287,6 +1295,10 @@ video {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[90\%\] {
+    width: 90%;
   }
 
   .md\:grid-cols-3 {
@@ -1401,6 +1413,10 @@ video {
 
   .another\:w-\[65\%\] {
     width: 65%;
+  }
+
+  .another\:w-\[70\%\] {
+    width: 70%;
   }
 
   .another\:flex-row {
