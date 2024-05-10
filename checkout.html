@@ -6,9 +6,9 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="p-4 md:p-0">
-    <div class=" w-full "><!-- main container -->
-        <div class="fixed top-0 left-0 w-full">
+<body class="p-4 md:p-0 mx-0 md:mx-44">
+    <div class=" w-full flex justify-center items-center "><!-- main container -->
+        <div class="fixed top-0 left-0 w-full bg-white">
             <header class="  h-14  items-center mt-3 mx-0 md:mx-44">
                 <nav class=" flex justify-between  items-center ">
                     <div class="md:w-32 md:h-8 w-12  items-center flex justify-center h-5 " id="Home">
@@ -29,110 +29,112 @@
         </div>
 
 <!--   -->
-<div class="mx-0 md:mx-44">
+<div class="w-full ">
     <div><h1 class="font-bold text-2xl mt-20 ">Review your order</h1></div>
-<div class="flex mt-4  gap-6 md:flex-row flex-col-reverse w-full">
-<div class="flex flex-col  gap-6">
-    <div class="  md:w-[50rem] w-[28rem]  border border-gray-400 flex rounded-md"><!-- review -->
+<div class="flex items-center justify-center">
+    <div class="flex mt-4  gap-3 md:flex-row flex-col-reverse w-full">
+        <div class="flex flex-col  gap-6 md:w-[100%] w-[28rem] m bg-red-300">
+            <div class="  md:w-[100%] w-[28rem]  border border-gray-400 flex rounded-md h-[40%]"><!-- review -->
+                
+                <div class="flex justify-center md:justify-normal ">
+                    <div class="   p-4"><!-- orders -->
+                            <div class="mb-5 font-bold text-xl text-green-700"><p>Delivery date:Tuesday, June 21</p></div>
+                            <div class="flex md:flex-row flex-col gap-4">
+                                <div class="flex gap-5 "><!-- card info-->
+                                    <div class="w-[20%] h-[40%]  flex justify-center items-center  bg-contain"><!-- image container -->
+                                        <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-full h-full">
+                                      </div>
+                                <div class="w-80 min-w-36">
+                                    <div class="font-bold"><p>Black and Gray athletic-cotton-socks-6-pairs</p></div>
+                                    <div class="text-red-800 font-bold"><p>$10.90</p></div>
+                                    <div><p>Quantity: 2 <span class="text-blue-500">Update Delete</span></p></div>
+                                </div>
         
-        <div class="flex justify-center md:justify-normal ">
-            <div class="   p-4"><!-- orders -->
-                    <div class="mb-5 font-bold text-xl text-green-700"><p>Delivery date:Tuesday, June 21</p></div>
-                    <div class="flex md:flex-row flex-col gap-4">
-                        <div class="flex gap-5 "><!-- card info-->
-                            <div class="w-[7rem] h-[7rem]  flex justify-center items-center  bg-contain"><!-- image container -->
-                                <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-full h-full">
-                              </div>
-                        <div class="w-80">
-                            <div class="font-bold"><p>Black and Gray athletic-cotton-socks-6-pairs</p></div>
-                            <div class="text-red-800 font-bold"><p>$10.90</p></div>
-                            <div><p>Quantity: 2 <span class="text-blue-500">Update Delete</span></p></div>
-                        </div>
-
-                        </div><!-- end of car info -->
-                        <div class="w-52 ">
-                            <div class="font-bold"><p>Choose a Delivery option</p></div>
-                          <div class="flex flex-col w-full">
-                           <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
-                            <div class="">
-                                <p class="text-green-700">Tuesday, June 21</p>
-                                <p class="text-gray-400">FREE shipping</p>
-                            </div></div> 
-                            <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                </div><!-- end of car info -->
+                                <div class="w-[40%] h-20 ">
+                                    <div class="font-bold"><p>Choose a Delivery option</p></div>
+                                  <div class="flex flex-col w-full">
+                                   <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                    <div class="">
+                                        <p class="text-green-700">Tuesday, June 21</p>
+                                        <p class="text-gray-400">FREE shipping</p>
+                                    </div></div> 
+                                    <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                        <div class="">
+                                            <p class="text-green-700">Wednesday, june 15</p>
+                                            <p class="text-gray-400">$4.99-shipping</p>
+                                        </div></div> 
+                                        <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                            <div class="">
+                                                <p class="text-green-700">Monday, june 13</p>
+                                                <p class="text-gray-400">FREE shipping</p>
+                                            </div></div> 
+                                    
+                                  </div>
+        
+        
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+        </div>
+        <div class="  md:w-[50rem] w-[28rem]  border border-gray-400 flex rounded-md"><!-- review -->
+                
+            <div class="flex justify-center md:justify-normal ">
+                <div class="   p-4"><!-- orders -->
+                        <div class="mb-5 font-bold text-xl text-green-700"><p>Delivery date:Tuesday, June 21</p></div>
+                        <div class="flex md:flex-row flex-col gap-4">
+                            <div class="flex gap-5 "><!-- card info-->
+                                <div class="w-[7rem] h-[7rem]  flex justify-center items-center  bg-contain"><!-- image container -->
+                                    <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-full h-full">
+                                  </div>
+                            <div class="w-80">
+                                <div class="font-bold"><p>Black and Gray athletic-cotton-socks-6-pairs</p></div>
+                                <div class="text-red-800 font-bold"><p>$10.90</p></div>
+                                <div><p>Quantity: 2 <span class="text-blue-500">Update Delete</span></p></div>
+                            </div>
+        
+                            </div><!-- end of car info -->
+                            <div class="w-52 ">
+                                <div class="font-bold"><p>Choose a Delivery option</p></div>
+                              <div class="flex flex-col w-full">
+                               <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
                                 <div class="">
-                                    <p class="text-green-700">Wednesday, june 15</p>
-                                    <p class="text-gray-400">$4.99-shipping</p>
+                                    <p class="text-green-700">Tuesday, June 21</p>
+                                    <p class="text-gray-400">FREE shipping</p>
                                 </div></div> 
                                 <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
                                     <div class="">
-                                        <p class="text-green-700">Monday, june 13</p>
-                                        <p class="text-gray-400">FREE shipping</p>
+                                        <p class="text-green-700">Wednesday, june 15</p>
+                                        <p class="text-gray-400">$4.99-shipping</p>
                                     </div></div> 
-                            
-                          </div>
-
-
-                        </div>
-                    </div>
-            </div>
-           
-        </div>
-</div>
-<div class="  md:w-[50rem] w-[28rem]  border border-gray-400 flex rounded-md"><!-- review -->
+                                    <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                                        <div class="">
+                                            <p class="text-green-700">Monday, june 13</p>
+                                            <p class="text-gray-400">FREE shipping</p>
+                                        </div></div> 
+                                
+                              </div>
         
-    <div class="flex justify-center md:justify-normal ">
-        <div class="   p-4"><!-- orders -->
-                <div class="mb-5 font-bold text-xl text-green-700"><p>Delivery date:Tuesday, June 21</p></div>
-                <div class="flex md:flex-row flex-col gap-4">
-                    <div class="flex gap-5 "><!-- card info-->
-                        <div class="w-[7rem] h-[7rem]  flex justify-center items-center  bg-contain"><!-- image container -->
-                            <img src="/images/menu/athletic-cotton-socks-6-pairs.jpg" alt="" class="w-full h-full">
-                          </div>
-                    <div class="w-80">
-                        <div class="font-bold"><p>Black and Gray athletic-cotton-socks-6-pairs</p></div>
-                        <div class="text-red-800 font-bold"><p>$10.90</p></div>
-                        <div><p>Quantity: 2 <span class="text-blue-500">Update Delete</span></p></div>
-                    </div>
-
-                    </div><!-- end of car info -->
-                    <div class="w-52 ">
-                        <div class="font-bold"><p>Choose a Delivery option</p></div>
-                      <div class="flex flex-col w-full">
-                       <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
-                        <div class="">
-                            <p class="text-green-700">Tuesday, June 21</p>
-                            <p class="text-gray-400">FREE shipping</p>
-                        </div></div> 
-                        <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
-                            <div class="">
-                                <p class="text-green-700">Wednesday, june 15</p>
-                                <p class="text-gray-400">$4.99-shipping</p>
-                            </div></div> 
-                            <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
-                                <div class="">
-                                    <p class="text-green-700">Monday, june 13</p>
-                                    <p class="text-gray-400">FREE shipping</p>
-                                </div></div> 
-                        
-                      </div>
-
-
-                    </div>
+        
+                            </div>
+                        </div>
                 </div>
+               
+            </div>
         </div>
-       
-    </div>
-</div>
-</div>
-    <div class="p-2 w-"><!-- summary -->
-       <div class="mb-5 font-bold text-xl"> <h1>Order Summary</h1></div>
-        <div>
-        <div class="flex justify-between"><p>items (<span>3</span>):</p><span>$42.75</span></div>
-        <div>p</div>
-
         </div>
-    </div>
-    
+            <div class="p-2 max-w-[28rem] min-w-[28rem] md:w-[50%] h-80 bg-purple-400 mx-auto"><!-- summary -->
+               <div class="mb-5 font-bold text-xl"> <h1>Order Summary</h1></div>
+                <div>
+                <div class="flex justify-between"><p>items (<span>3</span>):</p><span>$42.75</span></div>
+                <div>p</div>
+        
+                </div>
+            </div>
+            
+        </div>
 </div>
 </div>
 
