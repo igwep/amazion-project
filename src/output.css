@@ -650,6 +650,10 @@ video {
   top: 3.5rem;
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -663,6 +667,11 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .mb-0 {
@@ -891,6 +900,10 @@ video {
 
 .min-w-\[28rem\] {
   min-width: 28rem;
+}
+
+.min-w-\[30rem\] {
+  min-width: 30rem;
 }
 
 .max-w-\[28rem\] {
@@ -1130,6 +1143,11 @@ video {
   padding-right: 9rem;
 }
 
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1280,6 +1298,16 @@ video {
   .md\:mx-44 {
     margin-left: 11rem;
     margin-right: 11rem;
+  }
+
+  .md\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .md\:mx-60 {
+    margin-left: 15rem;
+    margin-right: 15rem;
   }
 
   .md\:flex {
@@ -1453,6 +1481,22 @@ video {
 
   .another\:w-\[35\%\] {
     width: 35%;
+  }
+
+  .another\:w-\[34\%\] {
+    width: 34%;
+  }
+
+  .another\:w-\[33\%\] {
+    width: 33%;
+  }
+
+  .another\:w-\[30\%\] {
+    width: 30%;
+  }
+
+  .another\:w-\[29\%\] {
+    width: 29%;
   }
 
   .another\:flex-row {
