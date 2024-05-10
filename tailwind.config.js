@@ -6,7 +6,9 @@ module.exports = {
       screens:{
         "tablet": "2900px",
         "smalls": "709px",
-        "another": "900px"
+        "another": "900px",
+        "and":"800",
+        "again":"1700px"
       },
       colors:{
         'amazon-blue': '#131921'
