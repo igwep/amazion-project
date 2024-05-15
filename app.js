@@ -12,7 +12,7 @@ import { products } from "./products.js";
         else {
             linkToggle.classList.remove('h-24')
             linkToggle.classList.add('h-0');
-        };
+        }; 
         
     });
     
