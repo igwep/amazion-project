@@ -1,5 +1,6 @@
 import { cart, addToCart, updateCart} from "./cart.js";
 import { products } from "./products.js";
+import { toTWO } from "./money.js";
 
     const linkToggle = document.querySelector('.link-toggle');
     const burger = document.querySelector('.burger');
@@ -34,7 +35,7 @@ let productHtml = '';
                  <p class="text-blue-400">${product.rating.count}</p>
                </div>
                <div class="mt-2"><!-- price -->
-                 <p class="font-bold">$${(product.priceCents / 100).toFixed(2)}</p>
+                 <p class="font-bold">$${toTWO(product.priceCents)}</p>
                </div>
                <!-- selection -->
                  <div class="mt-3">

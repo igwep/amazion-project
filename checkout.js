@@ -1,5 +1,6 @@
 import { cart } from "./cart.js";
 import { products } from "./products.js";
+import { toTWO } from "./money.js";
 
 let cartHTML = '';
 
@@ -23,7 +24,7 @@ cart.forEach((cartItem)=>{
                 </div>
                 <div class="md:w-[90%] w-[70%] ">
                 <p class="w-full font-bold ">${matching.name}</p>
-                <p class="text-red-700 font-bold">$${matching.priceCents}</p>
+                <p class="text-red-700 font-bold">$${toTWO(matching.priceCents)}</p>
                 <p class="w-full text-nowrap">Quantity: ${cartItem.quantity} <span class="text-blue-500 ">Update Delete</span></p>
                 </div>
         </div>
