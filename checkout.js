@@ -25,23 +25,23 @@ cart.forEach((cartItem)=>{
                 <div class="md:w-[90%] w-[70%] ">
                 <p class="w-full font-bold ">${matching.name}</p>
                 <p class="text-red-700 font-bold">$${toTWO(matching.priceCents)}</p>
-                <p class="w-full text-nowrap">Quantity: ${cartItem.quantity} <span class="text-blue-500 ">Update Delete</span></p>
+                <p class="w-full text-nowrap">Quantity: ${cartItem.quantity} <span class="text-blue-500 delete-button" data-product-id="${matching.id}">Update <span class="cursor-pointer hover:text-blue-400">Delete</span</span></p>
                 </div>
         </div>
             <div class="w-[40%] min-w-[15rem] h-20 ">
             <div class="font-bold"><p>Choose a Delivery option</p></div>
             <div class="flex flex-col w-full">
-            <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+            <div class="flex items-center"><input type="radio" name="delivery-option-${matching.id}" id="" class="h-5 w-6">
             <div class="">
                 <p class="text-green-700 font-semibold">Tuesday, June 21</p>
                 <p class="text-gray-400">FREE shipping</p>
             </div></div> 
-            <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+            <div class="flex items-center"><input type="radio" name="delivery-option-${matching.id}" id="" class="h-5 w-6">
                 <div class="">
                     <p class="text-green-700 font-semibold">Wednesday, june 15</p>
                     <p class="text-gray-400">$4.99-shipping</p>
                 </div></div> 
-                <div class="flex items-center"><input type="radio" name="" id="" class="h-5 w-6">
+                <div class="flex items-center"><input type="radio" name="delivery-option-${matching.id}" id="" class="h-5 w-6">
                     <div class="">
                         <p class="text-green-700 font-semibold">Monday, june 13</p>
                         <p class="text-gray-400">FREE shipping</p>

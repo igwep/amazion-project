@@ -650,14 +650,6 @@ video {
   top: 3.5rem;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -671,16 +663,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
 }
 
 .mb-0 {
@@ -725,10 +707,6 @@ video {
 
 .mt-9 {
   margin-top: 2.25rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .flex {
@@ -787,6 +765,10 @@ video {
   height: 2.25rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[25rem\] {
   height: 25rem;
 }
@@ -809,10 +791,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[100vh\] {
-  height: 100vh;
 }
 
 .min-h-28 {
@@ -935,28 +913,16 @@ video {
   gap: 3rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-7 {
-  gap: 1.75rem;
-}
-
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-20 {
-  gap: 5rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -1101,10 +1067,6 @@ video {
   padding-top: 0.5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1219,6 +1181,11 @@ video {
 .hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.hover\:text-blue-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
