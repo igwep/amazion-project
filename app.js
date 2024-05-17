@@ -1,4 +1,4 @@
-import { cart, addToCart, updateCart} from "./cart.js";
+import { cart, addToCart, updateCart, savetostorage} from "./cart.js";
 import { products } from "./products.js";
 import { toTWO } from "./money.js";
 
@@ -95,4 +95,8 @@ let productHtml = '';
       top:0
     })
   })
+  window.addEventListener('DOMContentLoaded', ()=>{
+    updateCart();
+    savetostorage();
+})
   

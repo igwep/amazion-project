@@ -1,8 +1,9 @@
-import { cart } from "./cart.js";
+import { cart, deleteFromCart, updateCart  } from "./cart.js";
 import { products } from "./products.js";
 import { toTWO } from "./money.js";
 
 let cartHTML = '';
+
 
 cart.forEach((cartItem)=>{
    const cartID = cartItem.productId;
@@ -15,7 +16,7 @@ cart.forEach((cartItem)=>{
     })
    cartHTML +=  `<div class="mt-2">
    
-   <div class="another:w-[100%] w-[90%] border border-gray-400 rounded-md p-4  another:h-[16rem] h-[25rem]   ">
+   <div class="another:w-[100%] w-[90%] border border-gray-400 rounded-md p-4  another:h-[16rem] h-[25rem] item-container-${matching.id} ">
     <div class="text-xl mt-2 mb-4 text-green-700 font-bold"><p>Delivery date: Tuesday, June 21</p></div>
     <div class="flex smalls:flex-row flex-col gap-4 w-full">
         <div class="flex gap-6 w-full">
@@ -25,7 +26,7 @@ cart.forEach((cartItem)=>{
                 <div class="md:w-[90%] w-[70%] ">
                 <p class="w-full font-bold ">${matching.name}</p>
                 <p class="text-red-700 font-bold">$${toTWO(matching.priceCents)}</p>
-                <p class="w-full text-nowrap">Quantity: ${cartItem.quantity} <span class="text-blue-500 delete-button" data-product-id="${matching.id}">Update <span class="cursor-pointer hover:text-blue-400">Delete</span</span></p>
+                <p class="w-full text-nowrap">Quantity: ${cartItem.quantity} <span class="text-blue-500 " data-product-id="${matching.id}"> <span class="check-out-update cursor-pointer" data-product-id="${matching.id} ">Update</span> <span class="cursor-pointer hover:text-blue-400 delete-button">Delete</span</span></p>
                 </div>
         </div>
             <div class="w-[40%] min-w-[15rem] h-20 ">
@@ -58,3 +59,25 @@ cart.forEach((cartItem)=>{
     
 })
 document.querySelector('.cart-container').innerHTML = cartHTML;
+document.querySelectorAll('.delete-button').forEach((link)=> {
+  link.addEventListener('click', ()=>{
+    const productId = link.dataset.productId;
+    deleteFromCart(productId);
+    const itemContainer = document.querySelector(`.item-container-${productId}`);
+itemContainer.remove()
+updateCart();
+  });
+  
+})
+window.addEventListener('DOMContentLoaded', ()=>{
+    updateCart();
+});
+document.querySelectorAll('.check-out-update').forEach((update) =>{
+    update.addEventListener('click', ()=>{
+        const updateId = update.dataset.productId;
+        console.log(updateId);
+    })
+
+
+})
+ 
