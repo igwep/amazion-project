@@ -70,5 +70,6 @@ export function addToCart(productId){
      
     })
     cart = newCart;
+    console.log(newCart);
     savetostorage();
   }

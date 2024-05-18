@@ -26,7 +26,7 @@ cart.forEach((cartItem)=>{
                 <div class="md:w-[90%] w-[70%] ">
                 <p class="w-full font-bold ">${matching.name}</p>
                 <p class="text-red-700 font-bold">$${toTWO(matching.priceCents)}</p>
-                <div class="w-full text-nowrap flex gap-2">Quantity: ${cartItem.quantity} <span class="text-blue-500 " data-product-id="${matching.id}"> <span class="check-out-update cursor-pointer" data-product-id="${matching.id} ">Update</span> <span class="cursor-pointer hover:text-blue-400 delete-button ">Delete</span><span class="hidden"><input type="text" class="border-2 w-9" placeholder=""><span class="ml-2">save</span></span></span></div>
+                <div class="w-full text-nowrap flex gap-2">Quantity: ${cartItem.quantity} <span class="text-blue-500 " > <span class="check-out-update cursor-pointer" data-product-id="${matching.id} ">Update</span> <span class="cursor-pointer hover:text-blue-400 delete-button " data-product-id="${matching.id}">Delete</span><span class="hidden"><input type="text" class="border-2 w-9" placeholder=""><span class="ml-2">save</span></span></span></div>
                 </div>
         </div>
             <div class="w-[40%] min-w-[15rem] h-20 ">
@@ -57,25 +57,29 @@ cart.forEach((cartItem)=>{
    </div>`;
 
     
-})
+});
 document.querySelector('.cart-container').innerHTML = cartHTML;
 document.querySelectorAll('.delete-button').forEach((link)=> {
   link.addEventListener('click', ()=>{
     const productId = link.dataset.productId;
     deleteFromCart(productId);
     const itemContainer = document.querySelector(`.item-container-${productId}`);
-itemContainer.remove()
-updateCart();
+    console.log(itemContainer);
+    itemContainer.remove();
+    updateCart();
   });
   
-})
+});
 window.addEventListener('DOMContentLoaded', ()=>{
     updateCart();
 });
 document.querySelectorAll('.check-out-update').forEach((update) =>{
     update.addEventListener('click', ()=>{
         const updateId = update.dataset.productId;
-        console.log(updateId);
+        const deleteBtn = document.querySelector('.delete-button');
+        deleteBtn.classList.toggle('hidden');
+        
+        
         
     })
 
